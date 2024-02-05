@@ -5,8 +5,10 @@
   "description": "Ulula Desktop Messanger",
   "main": "src/index.js",
   "scripts": {
-    "start:dev": "ELECTRON_START_URL=http://localhost:3000 electron --disable-gpu .",
+    "start:dev": "ELECTRON_START_URL=http://localhost:3000 electron --disable-gpu .", 
+    "start:dev:win": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "start:pro": "electron --disable-gpu .",
+    "start:pro:win": "electron .",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",

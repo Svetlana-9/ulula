@@ -1,0 +1,8 @@
+.style {
+  display: flex;
+  width: 25%;
+  height: 100vh; 
+  background-color: rgb(84, 164, 167);
+  position:relative;
+  border-right: thin solid white;
+}
