@@ -15,10 +15,10 @@ const createWindow = () => {
   });
 
   mainWindow.setMenuBarVisibility(false);
-  
-  if (process.env.ELECTRON_START_URL)
+
+  if (app.commandLine.hasSwitch('ulula-dev'))
   {
-    mainWindow.loadURL(process.env.ELECTRON_START_URL);
+    mainWindow.loadURL(app.commandLine.getSwitchValue('ulula-dev'));
     mainWindow.webContents.openDevTools({ mode: 'detach' });
   }
   else

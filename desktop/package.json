@@ -1,12 +1,12 @@
 {
-  "name": "ulula",
+  "name": "ulula-desktop",
   "productName": "Ulula Desktop",
   "version": "1.0.0",
   "description": "Ulula Desktop Messanger",
   "main": "src/index.js",
   "scripts": {
-    "start:dev": "ELECTRON_START_URL=http://localhost:3000 electron --disable-gpu .",
-    "start:pro": "electron --disable-gpu .",
+    "start:dev": "electron-forge start -- --ulula-dev=http://localhost:3000",
+    "start:pro": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
