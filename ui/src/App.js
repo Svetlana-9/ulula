@@ -1,35 +1,53 @@
-import './App.css';
-import { HashRouter, Routes, Route, NavLink } from 'react-router-dom'
-
-function Head() {
-  return (
-    <div>
-      <h1>Орел</h1>
-      <NavLink to='/tail'>перевернуть</NavLink>
-    </div>
-  );
-}
-
-function Tail() {
-  return (
-    <div>
-      <h1>Решка</h1>
-      <NavLink to='/'>перевернуть</NavLink>
-    </div>
-  );
-}
+import React from "react";
+import { useState, useEffect, useRef } from "react";
+import "./App.css";
 
 function App() {
+  const sidebarRef = useRef(null);
+  const [isResizing, setIsResizing] = useState(false);
+  const [sidebarWidth, setSidebarWidth] = useState(268);
+
+  const startResizing = React.useCallback((mouseDownEvent) => {
+    setIsResizing(true);
+  }, []);
+
+  const stopResizing = React.useCallback(() => {
+    setIsResizing(false);
+  }, []);
+
+  const resize = React.useCallback(
+    (mouseMoveEvent) => {
+      if (isResizing) {
+        setSidebarWidth(
+          mouseMoveEvent.clientX -
+            sidebarRef.current.getBoundingClientRect().left
+        );
+      }
+    },
+    [isResizing]
+  );
+
+  useEffect(() => {
+    window.addEventListener("mousemove", resize);
+    window.addEventListener("mouseup", stopResizing);
+    return () => {
+      window.removeEventListener("mousemove", resize);
+      window.removeEventListener("mouseup", stopResizing);
+    };
+  }, [resize, stopResizing]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={ <Head /> }></Route>
-            <Route path="/tail" element={ <Tail /> }></Route>
-          </Routes>
-        </HashRouter>
-      </header>
+    <div className="app-container">
+      <div
+        ref={sidebarRef}
+        className="app-sidebar"
+        style={{ width: sidebarWidth }}
+        onMouseDown={(e) => e.preventDefault()}
+      >
+        <div className="app-sidebar-content" />
+        <div className="app-sidebar-resizer" onMouseDown={startResizing} />
+      </div>
+      <div className="app-frame" />
     </div>
   );
 }
