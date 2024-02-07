@@ -1,0 +1,13 @@
+.logo {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+.header {
+  background-color: rgb(4, 71, 72);
+  height: 60px;
+  width: 480px;
+  border-bottom: thin solid white;
+  box-sizing: border-box;
+  position: relative
+}

@@ -1,10 +1,10 @@
 import "./App.css";
-import DialogsList from "./DialogsList/DialogsList";
+import Navigation from "./Navigation/Navigation"
 
 function App() {
   return (
     <div className="App">
-        <DialogsList />
+        <Navigation />
     </div>
   );
 }
