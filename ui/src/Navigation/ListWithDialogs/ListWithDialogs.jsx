@@ -1,16 +1,21 @@
-import ButtonGroups from "./ButtonGroups/ButtonGroups";
+import GroupsFilter from "./GroupsFilter/GroupsFilter";
 import DialogInList from "./DialogInList/DialogInList";
 import emulator from "../../emulator";
-import styles from "./ListWithDialogs.module.css"
+import Box from "@mui/system/Box";
 
 export default function ListWithDialogs() {
   const contacts = emulator.listContacts();
+  const groups = emulator.getGroups();
   return (
-    <div className={styles.listWithDialogs}>
-      <ButtonGroups />
+    <Box 
+    sx={{
+      m:0,
+      p:0,
+    }}>
+      <GroupsFilter list = {groups} label = {"Выберете группу"}/>
       {contacts.map((contact) => {
-       return <DialogInList key = {contact.id} contact={contact} />;
+       return <DialogInList dialoge = {emulator.getDialogue(contact.id)} key = {contact.id} contact={contact} />;
       })}
-    </div> 
+    </Box>
   );
 }

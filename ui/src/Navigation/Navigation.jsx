@@ -1,12 +1,20 @@
-import styles from "./Navigation.module.css";
 import Header from "./Header/Header";
-import ListWithDialogs from "./ListWithDialogs/ListWithDialogs"
+import ListWithDialogs from "./ListWithDialogs/ListWithDialogs";
+import Box from "@mui/system/Box";
 
-export default function DialogsList () {
+export default function DialogsList() {
   return (
-    <div className={styles.navigation} >
+    <Box
+      sx={{
+        bgcolor: "secondary.main",
+        width: 1/4,
+        boxSizing: "border-box",
+        borderRight: "2px solid white",
+        height: "100vh",
+      }}
+    >
       <Header />
       <ListWithDialogs />
-    </div>
-  )
+    </Box>
+  );
 }

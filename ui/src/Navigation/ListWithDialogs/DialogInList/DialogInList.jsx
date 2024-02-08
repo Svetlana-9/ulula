@@ -1,14 +1,37 @@
 import Avatar from "@mui/material/Avatar";
-import styles from "./DialogInList.module.css";
-import { Stack } from "@mui/material";
+import Box from "@mui/system/Box";
+import Stack from '@mui/system/Stack';
 
-export default function DialogInList({contact}) {
+export default function DialogInList({ contact, dialoge }) {
   return (
-    <div className={styles.dialogInList}>
-      <Stack direction="row" spacing={5}>
-        <Avatar className={styles.avatar} src={contact.avatar} sx={{ width: 80, height: 80}} />
-        <h2 className={styles.alias}>{contact.alias}</h2>
+    <Box
+      sx={{
+        height: 70,
+        borderBottom: 1,
+        mr: 1,
+        ml: 1,
+        borderColor: "primary.light",
+        display: "flex",
+        "&:hover": {
+          bgcolor: "secondary.light",
+        }
+      }}
+    >
+      <Avatar
+        sx={{
+          boxSizing: "border-box",
+          m: 0.5,
+          width: 60,
+          height: 60,
+        }}
+        src={contact.avatar}
+      />
+        <Stack spacing={0.4} sx={{
+         typography: "massege",
+        }}>
+        <h3>{contact.alias}</h3>
+        <p>{dialoge[dialoge.length - 1].message}</p>
       </Stack>
-    </div>
+    </Box>
   );
 }
