@@ -1,5 +1,8 @@
+import FullDialoge from "./FullDialoge/FullDialoge";
 import Navigation from "./Navigation/Navigation";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Stack } from "@mui/material";
+import { useState } from "react";
 
 const theme = createTheme({
   palette: {
@@ -20,16 +23,25 @@ const theme = createTheme({
     },
   },
   typography: {
-    massege :{
-    fontFamily: 'Nunito Sans',
-    fontSize: 15,
-    }
-  }
+    massege: {
+      fontFamily: "Nunito Sans",
+      fontSize: 15,
+    },
+  },
 });
 function App() {
+  const [FullDialog, setFullDialoge] = useState([]);
+  function handleClick(contact) {
+    setFullDialoge(<FullDialoge contact={contact} />);
+  }
   return (
     <ThemeProvider theme={theme}>
-      <Navigation />
+      <Stack direction={"row"} sx={{
+        bgcolor: "primary.main"
+      }}>
+        <Navigation funcOnClick = {handleClick} />
+        {FullDialog}
+        </Stack>
     </ThemeProvider>
   );
 }

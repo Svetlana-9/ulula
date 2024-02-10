@@ -1,6 +1,6 @@
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/system/Box";
-import Stack from '@mui/system/Stack';
+import Stack from "@mui/system/Stack";
 
 export default function DialogInList({ contact, dialoge }) {
   return (
@@ -14,7 +14,7 @@ export default function DialogInList({ contact, dialoge }) {
         display: "flex",
         "&:hover": {
           bgcolor: "secondary.light",
-        }
+        },
       }}
     >
       <Avatar
@@ -26,9 +26,12 @@ export default function DialogInList({ contact, dialoge }) {
         }}
         src={contact.avatar}
       />
-        <Stack spacing={0.4} sx={{
-         typography: "massege",
-        }}>
+      <Stack
+        spacing={0.4}
+        sx={{
+          typography: "massege",
+        }}
+      >
         <h3>{contact.alias}</h3>
         <p>{dialoge[dialoge.length - 1].message}</p>
       </Stack>

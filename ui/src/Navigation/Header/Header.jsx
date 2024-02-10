@@ -8,6 +8,7 @@ export default function Header() {
         bgcolor: "primary.main",
         boxSizing:"border-box",
         borderBottom: "2px solid white",
+        height: 1/11 
       }}
       direction="row"
       spacing={5}

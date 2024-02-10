@@ -58,7 +58,7 @@ let profile = {
   firstname: 'Иван',
   lastname: 'Иванов',
   email: 'ivan.ivanov@mailbox.su',
-  groups: ['семья', 'друзья', 'работа'],
+  groups: ['Семья', 'Друзья', 'Работа'],
   avatar: me
 };
 
@@ -69,7 +69,7 @@ let contacts = [
     firstname: 'Петр',
     lastname: 'Иванов',
     email: 'peter.ivanov@mailbox.su',
-    groups: ['семья'],
+    groups: ['Семья'],
     avatar: father
   },
   {
@@ -78,7 +78,7 @@ let contacts = [
     firstname: 'Мария',
     lastname: 'Иванова',
     email: 'maria.ivanova@mailbox.su',
-    groups: ['family'],
+    groups: ['Семья'],
     avatar: mother
   },
   {
@@ -87,7 +87,7 @@ let contacts = [
     firstname: 'Федор',
     lastname: 'Иванов',
     email: 'fedor.ivanov@mailbox.su',
-    groups: ['семья'],
+    groups: ['Семья'],
     avatar: grandpa
   },
   {
@@ -96,7 +96,7 @@ let contacts = [
     firstname: 'Ирина',
     lastname: 'Иванова',
     email: 'irene.ivanova@mailbox.su',
-    groups: ['семья'],
+    groups: ['Семья'],
     avatar: grandma
   },
   {
@@ -105,7 +105,7 @@ let contacts = [
     firstname: 'Лиза',
     lastname: 'Иванова',
     email: 'lisa.ivanova@mailbox.su',
-    groups: ['семья'],
+    groups: ['Семья'],
     avatar: sister
   },
   {
@@ -114,7 +114,7 @@ let contacts = [
     firstname: 'Юра',
     lastname: 'Иванов',
     email: 'yuri.ivanov@mailbox.su',
-    groups: ['семья'],
+    groups: ['Семья'],
     avatar: brother
   },
   {
@@ -123,7 +123,7 @@ let contacts = [
     firstname: 'Таня',
     lastname: 'Васильева',
     email: 'tanya.vasilieva@mailbox.su',
-    groups: ['друзья'],
+    groups: ['Друзья','Работа'],
     avatar: maiden
   },
   {
@@ -132,7 +132,7 @@ let contacts = [
     firstname: 'Олег',
     lastname: 'Сидоров',
     email: 'oleg.sidorov@mailbox.su',
-    groups: ['работа'],
+    groups: ['Работа'],
     avatar: boss
   }
 ];
