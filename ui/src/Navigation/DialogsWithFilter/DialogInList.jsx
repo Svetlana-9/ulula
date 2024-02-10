@@ -30,6 +30,7 @@ export default function DialogInList({ contact, dialoge }) {
         spacing={0.4}
         sx={{
           typography: "massege",
+          textOverflow:"ellipsis",
         }}
       >
         <h3>{contact.alias}</h3>

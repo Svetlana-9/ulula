@@ -14,6 +14,7 @@ export default function DialogsList( {funcOnClick}) {
         boxSizing: "border-box",
         borderRight: "2px solid white",
         height: "100vh",
+      
       }}
     >
       <Header />
