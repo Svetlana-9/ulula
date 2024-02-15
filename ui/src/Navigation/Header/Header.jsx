@@ -7,7 +7,7 @@ export default function Header() {
       sx={{
         bgcolor: "primary.main",
         boxSizing:"border-box",
-        borderBottom: "2px solid white",
+        borderBottom: "2px solid black",
         height: 1/11 
       }}
       direction="row"

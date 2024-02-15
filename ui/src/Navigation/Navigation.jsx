@@ -9,12 +9,11 @@ export default function DialogsList( {funcOnClick}) {
   return (
     <Box
       sx={{
-        bgcolor: "secondary.main",
-        width: 1/4,
+        bgcolor: "primary.main",
+        width: 0.2,
         boxSizing: "border-box",
-        borderRight: "2px solid white",
+        borderRight: "2px solid black",
         height: "100vh",
-      
       }}
     >
       <Header />

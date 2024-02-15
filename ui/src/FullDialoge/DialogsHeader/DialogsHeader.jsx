@@ -10,8 +10,8 @@ export default function DialogsHeader({contact}) {
       spacing={2}
       sx={{
         typography: "massege",
-        borderBottom: "2px solid white",
-        height: 1 / 11,
+        borderBottom: "2px solid black",
+        height: 1/11,
         boxSizing: "border-box",
       }}
     >
@@ -27,7 +27,7 @@ export default function DialogsHeader({contact}) {
         src={contact.avatar}
       />
       </Box>
-      <h2>{contact.alias}</h2>
+      <h2 >{contact.alias}</h2>
     </Stack>
   );
 }

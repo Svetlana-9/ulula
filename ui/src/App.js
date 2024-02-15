@@ -7,10 +7,10 @@ import { useState } from "react";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#00695c",
+      main: "#d2f7f4",
     },
     secondary: {
-      main: "#80cbc4",
+      main: "#ffffff",
     },
     error: {
       main: "#f44336",
@@ -23,9 +23,9 @@ const theme = createTheme({
     },
   },
   typography: {
-    massege: {
-      fontFamily: "Nunito Sans",
-      fontSize: 15,
+    maesage: {
+      fontFamily: "Palatino, URW Palladio L, serif",
+      fontSize: 17,
     },
   },
 });

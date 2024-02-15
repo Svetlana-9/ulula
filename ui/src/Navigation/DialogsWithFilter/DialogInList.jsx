@@ -10,10 +10,10 @@ export default function DialogInList({ contact, dialoge }) {
         borderBottom: 1,
         mr: 1,
         ml: 1,
-        borderColor: "primary.light",
+        borderColor: "black",
         display: "flex",
         "&:hover": {
-          bgcolor: "secondary.light",
+          bgcolor: "#aeebdf",
         },
       }}
     >
@@ -29,7 +29,7 @@ export default function DialogInList({ contact, dialoge }) {
       <Stack
         spacing={0.4}
         sx={{
-          typography: "massege",
+          typography: "message",
           textOverflow:"ellipsis",
         }}
       >
