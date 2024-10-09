@@ -1,3 +1,7 @@
+Текущий результат: 
+
+![image](https://github.com/user-attachments/assets/4da2ec3a-ee29-42e8-b1c8-c669e7f09dfd)
+
 # README
 
 This application is under developing. Thus, the following description declares the basic principles and objectives.
@@ -13,3 +17,4 @@ Install app to your computer, bind email account to your messanger, add email of
 ## Copyright
 
 Copyright © 2024 Novemus Band. All Rights Reserved.
+
